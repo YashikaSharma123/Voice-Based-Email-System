@@ -1,8 +1,8 @@
-import pyttsx3 #(it is use to convert text to speech and it work offline)
-import speech_recognition as sr #it convert speech to text
+import pyttsx3 
+import speech_recognition as sr 
 import os 
-import smtplib #backend mai mail easily transfer and recive ho
-import datetime #goodmornig and afternoon speak
+import smtplib 
+import datetime 
 
 engine = pyttsx3.init('sapi5')#sapi5 parameter which help in initialization.and initialize the lib
 
@@ -115,7 +115,7 @@ def checkmail():
 if __name__== "__main__": #it call by itself
     wishMe()
     while True:
-    #if 1:
+  
         query = takeCommand().lower()#convert into lower case string
 
 
@@ -141,7 +141,7 @@ if __name__== "__main__": #it call by itself
                 b=str(b)
                 print("Print: ",b)
                 
-                if b=="new":               #if b=="Single":
+                if b=="new":               
                     print(b)
                     speak("whom are you want to send this mail")
                     mail=takeCommand()
@@ -151,7 +151,7 @@ if __name__== "__main__": #it call by itself
                     to=(mail+'@gmail.com')
                     sendEmail(to,content)
                     speak('Email has been new sent!')
-                elif b=="old":              #if b is multiple
+                elif b=="old":              
                     print(b)
                     speak("You can send this mail single or all user also") 
                     to = {"Name":"xyz1@gmail.com","all":["xyz1@gmail.com","xyz2@gmail.com","xyz3@gmail.com"]}
@@ -167,7 +167,7 @@ if __name__== "__main__": #it call by itself
     
             except Exception as e:
                 print(e)
-                #speak("Sorry my loard. I am not able to send this email ")
+                
 
 
 
